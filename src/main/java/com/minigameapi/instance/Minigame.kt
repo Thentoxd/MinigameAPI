@@ -46,11 +46,11 @@ abstract class Minigame(protected var plugin: JavaPlugin, private var stage: Sta
     }
 
     protected fun log(message: String) {
-        Bukkit.broadcastMessage("${ChatColor.GREEN}[Minigame] ${ChatColor.WHITE}$message")
+        Bukkit.broadcastMessage("${ChatColor.GREEN}[Minigame -> ${this.javaClass.simpleName}] ${ChatColor.WHITE}$message")
     }
 
     protected fun consoleLog(message: String) {
-        Bukkit.getConsoleSender().sendMessage("${ChatColor.GREEN}[Minigame] ${ChatColor.WHITE}$message")
+        Bukkit.getConsoleSender().sendMessage("${ChatColor.GREEN}[Minigame -> ${this.javaClass.simpleName}] ${ChatColor.WHITE}$message")
     }
 }
 

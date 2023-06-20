@@ -1,6 +1,7 @@
 package com.minigameapi.testMinigame
 
 import com.minigameapi.instance.Minigame
+import com.minigameapi.instance.MinigameAPI
 import com.minigameapi.instance.Runnable
 import com.minigameapi.instance.Stage
 import net.md_5.bungee.api.ChatColor
@@ -41,6 +42,8 @@ class DeathSwap(plugin: JavaPlugin) : Minigame(plugin, Stage.Development) {
 
     override fun reset() {
         unListenForEvents()
+
+        MinigameAPI.getRunnableByKey("death.swap_mainTimer")!!.cancel()
     }
 
     fun swapPlayers() {

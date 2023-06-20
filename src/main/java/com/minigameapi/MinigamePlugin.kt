@@ -9,14 +9,6 @@ import org.bukkit.plugin.java.JavaPlugin
 
 class MinigamePlugin : JavaPlugin(), CommandExecutor {
 
-    override fun onEnable() {
-        // Plugin startup logic
-    }
-
-    override fun onDisable() {
-        // Plugin shutdown logic
-    }
-
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
         if(command.name.equals("start", ignoreCase = true)) {
             DeathSwap(this).addPlayer(Bukkit.getPlayer("Thento")!!).start()
