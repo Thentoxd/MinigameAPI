@@ -1,0 +1,6 @@
+name: MinigameAPI
+version: 1.0.9
+main: com.minigameapi.MinigamePlugin
+api-version: 1.19
+commands:
+  start:
